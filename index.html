@@ -38,7 +38,7 @@
     let startTime
     let offsetX
     let currentTime
-    const sprites = [ ]
+    sprites = [ ]
 
     function main () {
       setup()
@@ -80,6 +80,9 @@
             duration: Math.random() * 2000 + 300
           })
         }
+      }
+      if (sprites.length > 200) {
+        sprites = sprites.filter(s => s.x >= minX)
       }
     }
     function draw () {
