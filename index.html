@@ -76,7 +76,7 @@
         for (let y = 0; y < 10; y++) {
           sprites.push({
             x, y,
-            startTime: x < 4 && initial[y][x] ? 0 : Date.now() + (1 - Math.pow(Math.random(), 1 + y / 5)) * 4000,
+            startTime: x < 4 && initial[y][x] ? 0 : Date.now() + (1 - Math.pow(Math.random(), 1 + y / 5)) * 2500 + y * 200,
             duration: Math.random() * 2000 + 300
           })
         }
